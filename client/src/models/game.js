@@ -77,6 +77,10 @@ Game.prototype = {
 
   noOfCardsToDeal: function() {
     return this.cardsToDeal.length;
+  },
+
+  deal: function() {
+    return this.cardsToDeal.pop();
   }
 
 };

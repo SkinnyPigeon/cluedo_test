@@ -115,5 +115,13 @@ describe( "The Game: ", function() {
     assert.equal( 5, game.noOfCardsToDeal() );
   });
 
+  it( "Should be able to deal the cards to the players", function() {
+    game.addRestOfCards( characterCards );
+    var card = game.deal();
+    assert.equal( "Miss Scarlet", card );
+  });
+
+
+
 
 });
