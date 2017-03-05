@@ -1,3 +1,5 @@
+var _ = require( 'lodash' );
+
 var Game = function() {
 
   this.players = [];
@@ -17,6 +19,10 @@ Game.prototype = {
 
   checkPlayer: function() {
     return this.players[0].playerName();
+  },
+
+  nextTurn: function() {
+    this.players = _.reverse( this.players );
   },
 
   noOfCards: function() {

@@ -62,9 +62,9 @@ describe( "The Game: ", function() {
     assert.equal( "Euan", game.checkPlayer() ); 
   });
 
-  // it( "Should be able to rotate player turns", function() {
-  //   game.nextTurn();
-  //   assert.equal( 2, game.checkPlayer() );
-  // });
+  it( "Should be able to rotate player turns", function() {
+    game.nextTurn();
+    assert.equal( "Laura", game.checkPlayer() );
+  });
 
 });
