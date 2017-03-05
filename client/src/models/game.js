@@ -89,7 +89,7 @@ Game.prototype = {
   },
 
   dealAllCards: function() {
-    // this.cardsToDeal = _.shuffle( this.cardsToDeal );
+    this.cardsToDeal = _.shuffle( this.cardsToDeal );
     var totalCards = this.noOfCardsToDeal();
     for( var i = 0; i < totalCards; i++ ) {
       this.players[0].addCard( this.deal() );
