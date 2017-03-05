@@ -22,7 +22,7 @@ Game.prototype = {
   },
 
   nextTurn: function() {
-    this.players = _.reverse( this.players );
+    this.players.push(this.players.shift())
   },
 
   noOfCards: function() {

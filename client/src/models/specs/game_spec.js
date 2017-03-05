@@ -67,4 +67,11 @@ describe( "The Game: ", function() {
     assert.equal( "Laura", game.checkPlayer() );
   });
 
+  it( "Should rotate in order", function() {
+    p3 = new Player( "Jeff" );
+    game.addPlayer( p3 );
+    game.nextTurn();
+    assert.equal( "Laura", game.checkPlayer() );
+  });
+
 });
