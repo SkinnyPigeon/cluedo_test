@@ -13,6 +13,10 @@ Game.prototype = {
 
   noOfCards: function() {
     return this.secretFile.length;
+  },
+
+  addCard: function( card ) {
+    this.secretFile.push( card );
   }
 
 };
