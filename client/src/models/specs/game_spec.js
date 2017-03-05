@@ -121,6 +121,26 @@ describe( "The Game: ", function() {
     assert.equal( "Miss Scarlet", card );
   });
 
+  // it( "Should give a card to the players in the game", function() {
+  //   game.addRestOfCards( characterCards );
+  //   // game.dealAllCards();
+  //   assert.deepEqual( { name: 'Euan', cards: []}, game.seePlayer() );
+  // });
+
+  it( "Should deal all of the cards in it's deck", function() {
+    game.addRestOfCards( characterCards );
+    game.dealAllCards();
+    assert.equal( 0, game.noOfCardsToDeal() );
+  });
+
+  it( "Should add all and deal all of the cards", function() {
+    game.addRestOfCards( characterCards );
+    game.addRestOfCards( weaponCards );
+    game.addRestOfCards( roomCards );
+    game.dealAllCards();
+    assert.equal( 0, game.noOfCardsToDeal() );
+  })
+
 
 
 

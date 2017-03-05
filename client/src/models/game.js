@@ -20,6 +20,11 @@ Game.prototype = {
     return this.players[0].playerName();
   },
 
+  seePlayer: function() {
+    console.log( this.players[0] );
+    return this.players[0];
+  },
+
   nextTurn: function() {
     this.players.push(this.players.shift())
   },
@@ -81,6 +86,16 @@ Game.prototype = {
 
   deal: function() {
     return this.cardsToDeal.pop();
+  },
+
+  dealAllCards: function() {
+    // this.cardsToDeal = _.shuffle( this.cardsToDeal );
+    var totalCards = this.noOfCardsToDeal();
+    for( var i = 0; i < totalCards; i++ ) {
+      this.players[0].addCard( this.deal() );
+      console.log( this.players[0] );
+      this.nextTurn();
+    }
   }
 
 };
