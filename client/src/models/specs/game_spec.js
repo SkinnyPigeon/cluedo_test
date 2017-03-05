@@ -13,4 +13,8 @@ describe( "The Game: ", function() {
     assert.equal( 0, game.noOfPlayers() );
   });
 
+  it( "Should start with no cards in the secret file", function() {
+    assert.equal( 0, game.noOfCards() );
+  });
+
 });
