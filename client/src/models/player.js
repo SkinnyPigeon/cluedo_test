@@ -23,6 +23,10 @@ Player.prototype = {
 
   seeWeapon: function() {
     return this.cards[1];
+  },
+
+  seeRoom: function() {
+    return this.cards[2];
   }
 };
 

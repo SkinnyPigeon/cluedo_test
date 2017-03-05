@@ -44,6 +44,11 @@ describe( "The player: ", function() {
     assert.equal( "Spanner", weapon );
   });
 
+  it( "Should be able to see their own room", function() {
+    var room = p1.seeRoom();
+    assert.equal( "Study", room );
+  });
+
 });
 
 
