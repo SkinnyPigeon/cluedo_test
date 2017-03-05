@@ -24,4 +24,11 @@ describe( "The Game: ", function() {
     assert.equal( 1, game.noOfCards() );
   });
 
+  it( "Should be able to check which suspect is in the secret file", function() {
+    var character = characterCards.deal();
+    game.addCard( character );
+    var suspect = game.checkSuspect();
+    assert.equal( "Professor Plum", suspect );
+  }); 
+
 });

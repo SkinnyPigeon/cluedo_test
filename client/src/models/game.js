@@ -17,6 +17,10 @@ Game.prototype = {
 
   addCard: function( card ) {
     this.secretFile.push( card );
+  },
+
+  checkSuspect: function() {
+    return this.secretFile[0];
   }
 
 };
