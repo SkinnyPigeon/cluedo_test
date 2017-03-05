@@ -1,5 +1,6 @@
 var assert = require( 'chai' ).assert;
 var Game = require( '../game' );
+var Player = require( '../player' );
 var Characters = require( '../characterCards' );
 var Weapons = require( '../weaponCards' );
 var Rooms = require( '../roomCards' );
@@ -18,6 +19,10 @@ describe( "The Game: ", function() {
     game.addCard( character );
     game.addCard( weapon );
     game.addCard( room );
+    p1 = new Player( "Euan" );
+    p2 = new Player( "Laura" );
+    game.addPlayer( p1 );
+    game.addPlayer( p2 );
   });
 
   it( "Should start with no players", function() {
@@ -48,5 +53,12 @@ describe( "The Game: ", function() {
     var murderRoom = game.checkRoom();
     assert.equal( "Study", murderRoom );
   });
+
+  it( "Should be able to add players to the game", function() {
+    assert.equal( 2, game.noOfPlayers() );
+  })
+  // it( "Should be able to rotate player turns", function() {
+
+  // });
 
 });
