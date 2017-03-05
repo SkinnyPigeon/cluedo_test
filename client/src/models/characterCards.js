@@ -3,8 +3,13 @@ var characterCards = function() {
 };
 
 characterCards.prototype = {
+
   numberOfCards: function() {
     return this.cards.length;
+  },
+
+  deal: function() {
+    return this.cards.pop();
   }
 };
 

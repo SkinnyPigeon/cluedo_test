@@ -11,4 +11,8 @@ describe( "The Character Cards: ", function() {
     assert.equal( 6, cards.numberOfCards() );
   });
 
+  it( "Should be able to deal a card", function() {
+    assert.equal( "Professor Plum", cards.deal() );
+  });
+
 });
