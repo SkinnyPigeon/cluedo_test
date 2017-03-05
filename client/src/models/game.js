@@ -27,7 +27,9 @@ Game.prototype = {
     return this.secretFile[1];
   },
 
-  
+  checkRoom: function() {
+    return this.secretFile[2];
+  }
 
 };
 
