@@ -11,6 +11,10 @@ Player.prototype = {
 
   noOfCards: function() {
     return this.cards.length;
+  },
+
+  addCard: function( card ) {
+    this.cards.push( card );
   }
 };
 
