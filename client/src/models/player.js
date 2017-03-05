@@ -19,6 +19,10 @@ Player.prototype = {
 
   seeSuspect: function() {
     return this.cards[0];
+  },
+
+  seeWeapon: function() {
+    return this.cards[1];
   }
 };
 

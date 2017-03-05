@@ -39,6 +39,11 @@ describe( "The player: ", function() {
     assert.equal( "Professor Plum", suspect );
   });
 
+  it( "Should be able to see their own weapon card", function() {
+    var weapon = p1.seeWeapon();
+    assert.equal( "Spanner", weapon );
+  });
+
 });
 
 
