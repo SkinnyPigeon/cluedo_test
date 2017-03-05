@@ -61,6 +61,14 @@ Game.prototype = {
     }
   },
 
+  checkRoomGuess: function( room ) {
+    if( this.checkRoom() === room ) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+
 };
 
 module.exports = Game;

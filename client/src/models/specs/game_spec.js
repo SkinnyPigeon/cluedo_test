@@ -98,6 +98,18 @@ describe( "The Game: ", function() {
     assert.equal( false, answer );
   });
 
+  it( "Should return true to correct guess on room", function() {
+    var guess = p1.guessRoom( "Study" );
+    var answer = game.checkRoomGuess( guess );
+    assert.equal( true, answer );
+  });
+
+  it( "Should return false to incorrect guess on room", function() {
+    var guess = p1.guessRoom( "Balcony" );
+    var answer = game.checkRoomGuess( guess );
+    assert.equal( false, answer );
+  });
+
 
 
 });

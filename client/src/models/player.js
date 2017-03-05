@@ -36,6 +36,10 @@ Player.prototype = {
   guessWeapon: function( weapon ) {
     return weapon;
   },
+
+  guessRoom: function( room ) {
+    return room;
+  },
 };
 
 module.exports = Player;
