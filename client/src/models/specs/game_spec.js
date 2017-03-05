@@ -110,6 +110,10 @@ describe( "The Game: ", function() {
     assert.equal( false, answer );
   });
 
+  it( "Should be able to add the rest of the cards to the pile", function() {
+    game.addRestOfCards( characterCards );
+    assert.equal( 5, game.noOfCardsToDeal() );
+  });
 
 
 });

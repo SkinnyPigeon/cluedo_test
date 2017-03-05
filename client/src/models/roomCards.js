@@ -1,7 +1,7 @@
 var _ = require( 'lodash' )
 
 var roomCards = function() {
-  this.cards = [ "Kitchen", "Ballroom", "Conservatory", "Dining Room", "Cellar", "Billiard Room", "Library", "Lounge", "Hall", "Study" ];
+  this.cards = [ "Kitchen", "Ballroom", "Conservatory", "Dining Room", "Billiard Room", "Library", "Lounge", "Hall", "Study" ];
 };
 
 roomCards.prototype = {

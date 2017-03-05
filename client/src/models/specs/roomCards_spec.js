@@ -7,8 +7,8 @@ describe( "The Room Cards: ", function() {
     cards = new roomCards();
   });
 
-  it( "Should start with 10 cards in the deck", function() {
-    assert.equal( 10, cards.numberOfCards() );
+  it( "Should start with 9 cards in the deck", function() {
+    assert.equal( 9, cards.numberOfCards() );
   });
 
   it( "Should be able to deal a card", function() {

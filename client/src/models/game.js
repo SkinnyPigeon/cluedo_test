@@ -1,10 +1,9 @@
 var _ = require( 'lodash' );
 
 var Game = function() {
-
   this.players = [];
   this.secretFile = [];
-
+  this.cardsToDeal = [];
 };
 
 Game.prototype = {
@@ -68,6 +67,17 @@ Game.prototype = {
       return false;
     }
   },
+
+  addRestOfCards: function( pileOfCards ) {
+    var cards = pileOfCards.numberOfCards() ;
+    for( var i = 0; i < cards; i++ ) {
+      this.cardsToDeal.push( pileOfCards.deal() );
+    }
+  },
+
+  noOfCardsToDeal: function() {
+    return this.cardsToDeal.length;
+  }
 
 };
 
