@@ -21,7 +21,13 @@ Game.prototype = {
 
   checkSuspect: function() {
     return this.secretFile[0];
-  }
+  },
+
+  checkWeapon: function() {
+    return this.secretFile[1];
+  },
+
+  
 
 };
 

@@ -1,6 +1,7 @@
 var assert = require( 'chai' ).assert;
 var Game = require( '../game' );
 var Characters = require( '../characterCards' );
+var Weapons = require( '../weaponCards' );
 
 describe( "The Game: ", function() {
 
@@ -8,6 +9,7 @@ describe( "The Game: ", function() {
 
     game = new Game();
     characterCards = new Characters();
+    weaponCards = new Weapons();
   });
 
   it( "Should start with no players", function() {
@@ -30,5 +32,14 @@ describe( "The Game: ", function() {
     var suspect = game.checkSuspect();
     assert.equal( "Professor Plum", suspect );
   }); 
+
+  it( "Should be able to check which weapon is in the secret file", function() {
+    var character = characterCards.deal();
+    var weapon = weaponCards.deal();
+    game.addCard( character );
+    game.addCard( weapon );
+    var murderWeapon = game.checkWeapon();
+    assert.equal( "Spanner", murderWeapon );
+  });
 
 });
