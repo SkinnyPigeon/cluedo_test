@@ -15,4 +15,9 @@ describe( "The Character Cards: ", function() {
     assert.equal( "Professor Plum", cards.deal() );
   });
 
+  it( "Should be able to shuffle the deck", function() {
+    cards.shuffle();
+    assert.equal( "Professor Plum", cards.deal() );
+  })
+
 });
