@@ -15,6 +15,10 @@ Game.prototype = {
     this.players.push( player );
   },
 
+  checkPlayer: function() {
+    return this.players[0].playerName();
+  },
+
   noOfCards: function() {
     return this.secretFile.length;
   },

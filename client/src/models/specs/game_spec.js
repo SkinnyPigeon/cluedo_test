@@ -56,9 +56,15 @@ describe( "The Game: ", function() {
 
   it( "Should be able to add players to the game", function() {
     assert.equal( 2, game.noOfPlayers() );
-  })
-  // it( "Should be able to rotate player turns", function() {
+  });
 
+  it( "Should be able to check which player's turn it is", function() {
+    assert.equal( "Euan", game.checkPlayer() ); 
+  });
+
+  // it( "Should be able to rotate player turns", function() {
+  //   game.nextTurn();
+  //   assert.equal( 2, game.checkPlayer() );
   // });
 
 });
