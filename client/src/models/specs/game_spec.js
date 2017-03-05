@@ -86,6 +86,18 @@ describe( "The Game: ", function() {
     assert.equal( false, answer );
   });
 
+  it( "Should return true to correct guess on weapon", function() {
+    var guess = p1.guessWeapon( "Spanner" );
+    var answer = game.checkWeaponGuess( guess );
+    assert.equal( true, answer );
+  });
+
+  it( "Should return false to incorrect guess on weapon", function() {
+    var guess = p1.guessWeapon( "Powersaw" );
+    var answer = game.checkWeaponGuess( guess );
+    assert.equal( false, answer );
+  });
+
 
 
 });

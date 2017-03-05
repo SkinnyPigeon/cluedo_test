@@ -51,7 +51,15 @@ Game.prototype = {
     } else {
       return false;
     }
-  }
+  },
+
+  checkWeaponGuess: function( weapon ) {
+    if( this.checkWeapon() === weapon ) {
+      return true;
+    } else {
+      return false;
+    }
+  },
 
 };
 
