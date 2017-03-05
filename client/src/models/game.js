@@ -43,6 +43,14 @@ Game.prototype = {
 
   checkRoom: function() {
     return this.secretFile[2];
+  },
+
+  checkSuspectGuess: function( suspect ) {
+    if( this.checkSuspect() === suspect ) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 };

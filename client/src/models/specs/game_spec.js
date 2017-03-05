@@ -74,4 +74,18 @@ describe( "The Game: ", function() {
     assert.equal( "Laura", game.checkPlayer() );
   });
 
+  it( "Should return true to correct guess on character", function() {
+    var guess = p1.guessCharacter( "Professor Plum" );
+    var answer = game.checkSuspectGuess( guess );
+    assert.equal( true, answer );
+  });
+
+  it( "Should return false to incorrect guess on character", function() {
+    var guess = p1.guessCharacter( "Mrs White" );
+    var answer = game.checkSuspectGuess( guess );
+    assert.equal( false, answer );
+  });
+
+
+
 });

@@ -27,6 +27,10 @@ Player.prototype = {
 
   seeRoom: function() {
     return this.cards[2];
+  },
+
+  guessCharacter: function( character ) {
+    return character;
   }
 };
 
