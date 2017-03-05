@@ -15,6 +15,10 @@ Player.prototype = {
 
   addCard: function( card ) {
     this.cards.push( card );
+  },
+
+  seeSuspect: function() {
+    return this.cards[0];
   }
 };
 

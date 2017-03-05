@@ -34,4 +34,13 @@ describe( "The player: ", function() {
     assert.equal( 1, p2.noOfCards() );
   });
 
+  it( "Should be able to see their own character card", function() {
+    var suspect = p1.seeSuspect();
+    assert.equal( "Professor Plum", suspect );
+  });
+
 });
+
+
+
+
